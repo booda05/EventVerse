@@ -1,0 +1,30 @@
+.nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  
+  .nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav li {
+    margin: 0 15px;
+  }
+  
+  .nav a {
+    color: #22d3ee; /* Couleur futuriste pour les liens */
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 2px solid #22d3ee; /* Bordure autour des liens */
+    border-radius: 8px; /* Bordures arrondies pour un look moderne */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .nav a:hover {
+    background-color: #22d3ee; /* Changement de fond au survol */
+    color: #0f172a; /* Texte sombre pour contraste */
+  }
+  
