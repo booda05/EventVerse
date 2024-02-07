@@ -1,11 +1,9 @@
-import React from 'react';
-
-// Assurez-vous que Home n'a pas besoin de props spécifiques pour l'affichage basique
-const Home: React.FC = () => {
+const Home: React.FC<{ setPage: (page: string) => void }> = ({ setPage }) => {
   return (
     <div>
       <h2>Show Events</h2>
-      <p>This is the home page. Feel free to explore our site to learn more about what we offer.</p>
+      <p>Ceci est la page d'accueil. N'hésitez pas à explorer notre site pour en savoir plus sur ce que nous proposons.</p>
+      <button onClick={() => setPage('events')}>Aller à la page des événements</button>
     </div>
   );
 }

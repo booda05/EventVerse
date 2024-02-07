@@ -1,6 +1,37 @@
+/* Style général de l'en-tête, avec un fond sombre et des couleurs de texte claires pour le contraste */
 .header {
-  background-color: #0f172a; /* Fond sombre */
-  color: #e0e0e0; /* Texte clair */
-  padding: 20px;
-  text-align: center;
+    padding: 1rem;
+    background-color: #333; /* Couleur de fond plus sombre */
+    color: #fff; /* Texte en blanc pour contraster avec le fond sombre */
+}
+
+/* Augmente la taille du titre pour un impact visuel plus fort, avec une police élégante */
+.header h1 {
+    font-size: 3rem; /* Taille de police légèrement augmentée */
+    font-weight: 700; /* Rend le titre plus gras */
+    margin: 0; /* Enlève la marge par défaut pour un alignement parfait */
+    font-family: 'Merriweather', serif; /* Utilise une police plus élégante, assurez-vous de l'importer dans votre HTML ou CSS global */
+    text-align: center;
+}
+
+/* Assure que l'image du logo est bien intégrée dans le thème sombre, avec une taille appropriée */
+.header img {
+    width: 60px; /* Taille ajustée pour l'équilibre */
+    height: auto; /* Garde le ratio de l'image */
+    filter: brightness(0) invert(1); /* Inverse les couleurs du logo pour qu'il ressorte sur fond sombre */
+}
+
+/* Ajuste le style du titre pour un alignement et un espacement parfaits */
+.title {
+    display: 0;
+    align-items: center;
+    gap: 20px; /* Espacement légèrement augmenté pour une meilleure séparation */
+    text-decoration: none; /* Enlève les soulignements par défaut des liens */
+    color: #fff; /* Assure que le texte du lien est blanc */
+}
+
+/* Ajoutez des styles supplémentaires pour les liens au survol pour améliorer l'interactivité */
+.title:hover, .title:focus {
+    color: #ccc; /* Change la couleur au survol pour un effet interactif */
+    cursor: pointer; /* Change le curseur en pointeur pour indiquer un élément cliquable */
 }

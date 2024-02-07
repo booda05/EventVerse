@@ -1,30 +1,30 @@
-.nav {
+/* Style du conteneur de navigation, avec un espacement et une répartition équilibrée */
+.nav ul {
     display: flex;
-    justify-content: center;
-    padding: 10px 0;
-  }
-  
-  .nav ul {
-    list-style-type: none;
+    gap: 2rem; /* Ajuste l'espacement entre les éléments de la liste */
+    list-style-type: none; /* Enlève les puces de la liste pour une apparence plus propre */
+    margin: 0;
     padding: 0;
-    display: flex;
-  }
-  
-  .nav li {
-    margin: 0 15px;
-  }
-  
-  .nav a {
-    color: #22d3ee; /* Couleur futuriste pour les liens */
-    text-decoration: none;
-    padding: 5px 10px;
-    border: 2px solid #22d3ee; /* Bordure autour des liens */
-    border-radius: 8px; /* Bordures arrondies pour un look moderne */
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .nav a:hover {
-    background-color: #22d3ee; /* Changement de fond au survol */
-    color: #0f172a; /* Texte sombre pour contraste */
-  }
-  
+    align-items: center; /* Centre les éléments verticalement dans la nav */
+}
+
+.nav li {
+    margin-right: 1rem;
+}
+
+/* Style des liens dans la navigation pour s'aligner avec le thème sombre */
+.nav a {
+    color: #fff; /* Texte en blanc pour contraster avec le fond sombre */
+    text-decoration: none; /* Enlève le soulignement par défaut des liens */
+    font-weight: 500; /* Rend le texte légèrement plus gras pour une meilleure lisibilité */
+    padding: 0.5rem 1rem; /* Ajoute un peu de padding autour des liens pour un meilleur toucher */
+    border-radius: 5px; /* Adoucit les bords des liens pour un style plus moderne */
+    transition: background-color 0.3s ease; /* Animation douce pour le survol */
+}
+
+/* Ajoute un effet au survol pour améliorer l'interactivité des liens */
+.nav a:hover, .nav a:focus {
+    background-color: #555; /* Assombrit le fond du lien au survol pour un effet visuel */
+    color: #fff; /* Maintient la couleur du texte en blanc */
+    text-decoration: none; /* Assure que le soulignement ne réapparaît pas au survol */
+}

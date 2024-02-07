@@ -1,8 +1,9 @@
-.container {
+.body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #0f172a; /* Fond global sombre */
-    color: #e0e0e0; /* Texte clair pour contraste */
-  }
-  
+}
+
+.main {
+    flex: 1;
+}

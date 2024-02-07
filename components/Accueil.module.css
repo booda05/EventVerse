@@ -1,0 +1,86 @@
+/* Utilisez des noms de classe descriptifs pour chaque élément de votre page */
+@keyframes slideAndFade {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .heroTitle {
+    animation: slideAndFade 1.5s ease-out;
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1rem;    
+  }
+  
+.container {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .heroSection {
+    margin-bottom: 2rem;
+  }
+  
+  
+  .heroText, .sectionText {
+    font-size: 1.2rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .event, .testimonial {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .testimonialText {
+    background-color: #e7e7e7;
+    padding: 0.5rem 1rem;
+    border-left: 4px solid #333;
+    display: inline-block;
+  }
+  
+  .contactSection {
+    background-color: #f7f7f7;
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  
+  .formInput, .formTextarea, .formButton {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .formButton {
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .formButton:hover {
+    background-color: #555;
+  }
+  

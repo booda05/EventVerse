@@ -6,16 +6,21 @@ interface MenuNavProps {
 }
 
 const MenuNav: React.FC<MenuNavProps> = ({ setPage }) => {
+  const handleClick = (page: string, event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    setPage(page);
+  };
+
   return (
     <nav className={styles.nav}>
       <ul>
         <li>
-          <a href="#" onClick={() => setPage('home')}>
+          <a href="/home" onClick={(e) => handleClick('home', e)}>
             Home
           </a>
         </li>
         <li>
-          <a href="#" onClick={() => setPage('events')}>
+          <a href="/events" onClick={(e) => handleClick('events', e)}>
             Events
           </a>
         </li>
@@ -23,5 +28,6 @@ const MenuNav: React.FC<MenuNavProps> = ({ setPage }) => {
     </nav>
   );
 }
+
 
 export default MenuNav;
