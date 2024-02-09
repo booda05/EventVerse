@@ -9,7 +9,7 @@ export default function Accueil() {
       {/* Section Hero/Bannière */}
       <section className={styles.heroSection}>
       <h1 className={styles.heroTitle} onClick={() => setTitre('Découvrez Nos Événements !')}>{titre}</h1>
-        <p className={styles.heroText}>Découvrez les événements à ne pas manquer cette année !</p>
+        <p className={styles.heroText}>Découvrez les événements à ne pas manquer cette Semaine !</p>
       </section>
 
       {/* Section À propos / Introduction */}
@@ -20,12 +20,21 @@ export default function Accueil() {
 
       {/* Section Événements à venir */}
       <section>
-        <h2 className={styles.sectionTitle}>Événements à Venir</h2>
-        <div className={styles.event}>
-          <div>Événement 1 - Date - Lieu</div>
-          <div>Événement 2 - Date - Lieu</div>
-        </div>
-      </section>
+  <h2 className={styles.sectionTitle}>Événements à Venir</h2>
+  <div className={styles.eventsContainer}>
+    {/* Événement 1 */}
+    <div className={styles.event}>
+      <img src="/date.jpg" alt="Événement 1" className={styles.eventImage}/>
+      <div><h2>Soirée Speed Dating</h2></div>
+    </div>
+    
+    {/* Événement 2 */}
+    <div className={styles.event}>
+      <img src="/standup.jpg" alt="Événement 2" className={styles.eventImage}/>
+      <div><h2>Soirée StandUP</h2></div>
+    </div>
+  </div>
+</section>
 
       {/* Section Témoignages */}
       <section>

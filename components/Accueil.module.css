@@ -13,7 +13,7 @@
   .heroTitle {
     animation: slideAndFade 1.5s ease-out;
     font-size: 2.5rem;
-    color: #333;
+    color: #ffffff;
     text-align: center;
     margin-bottom: 1rem;    
   }
@@ -23,13 +23,19 @@
   }
   
   .heroSection {
+    background-image: url('/bar.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Fixe l'image par rapport au viewport */
     margin-bottom: 2rem;
+    height: 400px;
   }
   
   
   .heroText, .sectionText {
     font-size: 1.2rem;
-    color: #666;
+    color: #ffffff;
     text-align: center;
     margin-bottom: 1rem;
   }
@@ -83,4 +89,33 @@
   .formButton:hover {
     background-color: #555;
   }
-  
+  /* Ajoutez ceci à votre fichier Accueil.module.css */
+
+.eventsContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.event {
+  width: 45%; /* Ajustez selon la taille désirée */
+  margin-bottom: 2rem;
+}
+
+.eventImage {
+  width: 100%;
+  max-width: 300px; /* Ajustez selon la taille désirée */
+  height: 250px;
+  margin: 0 auto; /* Centre l'image dans le conteneur */
+  filter: brightness(70%); /* Assombrit l'image */
+  transition: filter 0.3s ease; /* Transition douce pour l'effet d'assombrissement */
+}
+.eventImage:hover {
+  filter: brightness(100%); /* Rend l'image plus lumineuse au survol */
+  transform: scale(1.05); /* Applique un léger zoom */
+}
+
+.eventText {
+  text-align: center;
+  margin-top: 1rem;
+}
