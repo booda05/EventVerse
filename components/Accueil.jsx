@@ -15,12 +15,15 @@ export default function Accueil() {
       {/* Section À propos / Introduction */}
       <section>
         <h2 className={styles.sectionTitle}>À propos de Nous</h2>
-        <p className={styles.sectionText}>Apprenez-en plus sur notre mission et ce que nous proposons.</p>
+        
+        <p className={styles.sectionText}> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel nunc orci. Ut venenatis justo ac sapien elementum aliquet. Suspendisse scelerisque feugiat magna et placerat. Nullam finibus enim vel sem mollis ullamcorper. Donec orci sapien, lobortis ut nulla id, aliquet imperdiet urna. In ac rutrum quam. Proin dictum ornare est non tincidunt. Morbi sed nulla quis lectus commodo ornare. Nunc porttitor metus rhoncus, laoreet nunc ut, semper nibh.
+
+Aliquam erat volutpat. Aenean tempor, ligula ut posuere tempus, magna arcu pretium lacus, non auctor nunc turpis ac lectus. Praesent pharetra accumsan ornare. Aenean varius in massa non hendrerit. Suspendisse potenti. Mauris tempus finibus urna id viverra. Vestibulum tempus sed tortor ullamcorper aliquet. Nullam in hendrerit ex. Maecenas a suscipit metus, tempus ullamcorper ligula. Nam ut scelerisque ante, finibus tempus dolor. Curabitur dignissim ipsum quis arcu porta, sed viverra dui condimentum. Sed maximus nibh tellus, a tempor est feugiat sit amet. Vivamus sed vehicula odio. </p>
       </section>
 
       {/* Section Événements à venir */}
       <section>
-  <h2 className={styles.sectionTitle}>Événements à Venir</h2>
+  <h2 className={styles.sectionTitle}>Événements</h2>
   <div className={styles.eventsContainer}>
     {/* Événement 1 */}
     <div className={styles.event}>

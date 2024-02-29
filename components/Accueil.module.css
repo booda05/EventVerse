@@ -33,12 +33,28 @@
   }
   
   
-  .heroText, .sectionText {
+  .heroText {
     font-size: 1.2rem;
-    color: #ffffff;
+    color: white;
     text-align: center;
     margin-bottom: 1rem;
   }
+  
+  .sectionText {
+    font-size: 1.2rem;
+    color: #757575;
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    max-width: 800px; /* Contrôle la largeur maximale du texte pour la lisibilité */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px; /* Ajoute de l'espace à l'intérieur de la boîte autour du texte */
+    background-color: #f9f9f9; /* Couleur de fond légère pour la boîte */
+    border-radius: 8px; /* Bords arrondis pour la boîte */
+    margin: 20px auto; /* Ajoute une marge au-dessus et en dessous tout en centrant la boîte */
+  }
+  
   
   .sectionTitle {
     font-size: 2rem;
@@ -63,7 +79,7 @@
   }
   
   .contactSection {
-    background-color: #f7f7f7;
+    background-color: grey;
     padding: 2rem;
     border-radius: 8px;
   }

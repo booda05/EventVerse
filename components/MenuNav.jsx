@@ -10,12 +10,12 @@ export default function MenuNav({setPage}) {
             </li>
             <li>
                 <a href="#" onClick={() => setPage('page1')}>
-                    Events
+                    Date
                 </a>
             </li>
             <li>
                 <a href="#" onClick={() => setPage('page2')}>
-                    About
+                    Comedie
                 </a>
             </li>
         </ul>

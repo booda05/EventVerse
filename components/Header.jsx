@@ -7,7 +7,7 @@ import MenuNav from "./MenuNav"
 import styles from "./Header.module.css"
 
 // Importe l'image du logo depuis le dossier public du projet.
-import logo from "@/public/logo.png"
+// import logo from "@/public/logo.png"
 
 // Définit le composant Header. Il prend une prop "setPage" pour changer la page affichée.
 export default function Header({setPage}) {
