@@ -1,23 +1,20 @@
-import styles from "./MenuNav.module.css"
+import Link from "next/link";
 
-export default function MenuNav({setPage}) {
-    return <nav className={styles.nav}>
-        <ul>
-        <li>
-                <a href="#" onClick={() => setPage('accueil')}>
-                    Accueil
-                </a>
-            </li>
-            <li>
-                <a href="#" onClick={() => setPage('page1')}>
-                    Date
-                </a>
-            </li>
-            <li>
-                <a href="#" onClick={() => setPage('page2')}>
-                    Comedie
-                </a>
-            </li>
-        </ul>
-    </nav>
+export default function MenuNav() {
+    return (
+        // Structure de votre composant MenuNav
+        <nav>
+            <ul>
+                <li>
+                    <Link href="/index"><a>Accueil</a></Link>
+                </li>
+                <li>
+                    <Link href="/page1"><a>Page 1</a></Link>
+                </li>
+                <li>
+                    <Link href="/page2"><a>Page 2</a></Link>
+                </li>
+            </ul>
+        </nav>
+    );
 }
