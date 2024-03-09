@@ -1,5 +1,5 @@
 import React from 'react';
-import EventsList from "./Event";
+import EventsList from "../components/Event";
 
 // Exemple de données pour les événements
 const speedDatingEvents = [
@@ -14,4 +14,4 @@ const speedDatingEvents = [
 
 const SpeedDatingPage = () => <EventsList events={speedDatingEvents} />;
 
-export default SpeedDatingPage;
+export default page1()(SpeedDatingPage);
