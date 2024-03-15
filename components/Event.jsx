@@ -1,4 +1,4 @@
-'use client'
+
 import React, { useState } from 'react';
 import styles from './Event.module.css';
 import Form from './Form';
@@ -16,6 +16,7 @@ const EventsList = ({ events }) => {
           <p className={styles.eventDescription}>{event.description}</p>
           <img src={event.imageUrl} alt={event.title} className={styles.eventImage} />
           <div className={styles.registerButtonContainer}>
+          {selectedEvent !== event.id && (
             <button
               type="button"
               className={styles.registerButton}
@@ -23,6 +24,7 @@ const EventsList = ({ events }) => {
             >
               S'inscrire
             </button>
+            )}
           </div>
           {selectedEvent === event.id && (
             <Form eventId={event.id} />

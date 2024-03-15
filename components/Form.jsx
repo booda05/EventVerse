@@ -118,7 +118,7 @@
                     onChange={handleRappelerMoi} />
             </label>
 
-            <input className={styles.submitButton} type="submit" value="Connection" />
+            <input className={styles.submitButton} type="submit" value="S'inscrire" />
 
             {estSoumis && 
                 <div>
