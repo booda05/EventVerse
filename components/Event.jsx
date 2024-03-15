@@ -1,8 +1,8 @@
-<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import styles from './Event.module.css';
 import Form from './Form';
+import Image from 'next/image';
 
 const EventsList = ({ events }) => {
   // État pour suivre l'événement sélectionné pour l'inscription
@@ -15,7 +15,7 @@ const EventsList = ({ events }) => {
           <h2 className={styles.eventTitle}>{event.title}</h2>
           <p className={styles.eventDate}>Date: {event.date}</p>
           <p className={styles.eventDescription}>{event.description}</p>
-          <img src={event.imageUrl} alt={event.title} className={styles.eventImage} />
+          <Image src={event.imageUrl} alt={event.title} width={500} height={300} className={styles.eventImage} />
           <div className={styles.registerButtonContainer}>
           {selectedEvent !== event.id && (
             <button
@@ -23,7 +23,7 @@ const EventsList = ({ events }) => {
               className={styles.registerButton}
               onClick={() => setSelectedEvent(event.id)}
             >
-              S'inscrire
+               S&apos;inscrire
             </button>
             )}
           </div>
@@ -36,41 +36,4 @@ const EventsList = ({ events }) => {
   );
 };
 
-=======
-'use client'
-import React, { useState } from 'react';
-import styles from './Event.module.css';
-import Form from './Form';
-
-const EventsList = ({ events }) => {
-  // État pour suivre l'événement sélectionné pour l'inscription
-  const [selectedEvent, setSelectedEvent] = useState(null);
-
-  return (
-    <div className={styles.pageContainer}>
-      {events.map((event) => (
-        <div key={event.id} className={styles.event}>
-          <h2 className={styles.eventTitle}>{event.title}</h2>
-          <p className={styles.eventDate}>Date: {event.date}</p>
-          <p className={styles.eventDescription}>{event.description}</p>
-          <img src={event.imageUrl} alt={event.title} className={styles.eventImage} />
-          <div className={styles.registerButtonContainer}>
-            <button
-              type="button"
-              className={styles.registerButton}
-              onClick={() => setSelectedEvent(event.id)}
-            >
-              S'inscrire
-            </button>
-          </div>
-          {selectedEvent === event.id && (
-            <Form eventId={event.id} />
-          )}
-        </div>
-      ))}
-    </div>
-  );
-};
-
->>>>>>> 08ecbe391f9cde44e88ef6e4144c1ebbdbb18d7b
 export default EventsList;
