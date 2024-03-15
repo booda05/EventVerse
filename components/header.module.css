@@ -23,7 +23,7 @@
 
 /* Ajuste le style du titre pour un alignement et un espacement parfaits */
 .title {
-    display: 10px;
+    display: 0;
     align-items: center;
     gap: 20px; /* Espacement légèrement augmenté pour une meilleure séparation */
     text-decoration: none; /* Enlève les soulignements par défaut des liens */

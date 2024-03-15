@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Utilisez des noms de classe descriptifs pour chaque élément de votre page */
 @keyframes slideAndFade {
     from {
@@ -144,3 +145,142 @@
   
   color: #969797; /* Change la couleur au survol, si vous le souhaitez */
 }
+=======
+/* Utilisez des noms de classe descriptifs pour chaque élément de votre page */
+@keyframes slideAndFade {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .heroTitle {
+    animation: slideAndFade 1.5s ease-out;
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 1rem;    
+  }
+  
+.container {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .heroSection {
+    background-image: url('/bar.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Fixe l'image par rapport au viewport */
+    margin-bottom: 2rem;
+    height: 400px;
+  }
+  
+  
+  .heroText {
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .sectionText {
+    font-size: 1.2rem;
+    color: #757575;
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    max-width: 800px; /* Contrôle la largeur maximale du texte pour la lisibilité */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px; /* Ajoute de l'espace à l'intérieur de la boîte autour du texte */
+    background-color: #f9f9f9; /* Couleur de fond légère pour la boîte */
+    border-radius: 8px; /* Bords arrondis pour la boîte */
+    margin: 20px auto; /* Ajoute une marge au-dessus et en dessous tout en centrant la boîte */
+  }
+  
+  
+  .sectionTitle {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .event, .testimonial {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .testimonialText {
+    background-color: #e7e7e7;
+    padding: 0.5rem 1rem;
+    border-left: 4px solid #333;
+    display: inline-block;
+  }
+  
+  .contactSection {
+    background-color: grey;
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  
+  .formInput, .formTextarea, .formButton {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .formButton {
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .formButton:hover {
+    background-color: #555;
+  }
+  /* Ajoutez ceci à votre fichier Accueil.module.css */
+
+.eventsContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.event {
+  width: 45%; /* Ajustez selon la taille désirée */
+  margin-bottom: 2rem;
+}
+
+.eventImage {
+  width: 100%;
+  max-width: 300px; /* Ajustez selon la taille désirée */
+  height: 250px;
+  margin: 0 auto; /* Centre l'image dans le conteneur */
+  filter: brightness(70%); /* Assombrit l'image */
+  transition: filter 0.3s ease; /* Transition douce pour l'effet d'assombrissement */
+}
+.eventImage:hover {
+  filter: brightness(100%); /* Rend l'image plus lumineuse au survol */
+  transform: scale(1.05); /* Applique un léger zoom */
+}
+
+.eventText {
+  text-align: center;
+  margin-top: 1rem;
+}
+>>>>>>> 08ecbe391f9cde44e88ef6e4144c1ebbdbb18d7b
