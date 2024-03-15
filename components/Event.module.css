@@ -85,3 +85,41 @@
     }
   }
   
+  .registerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 20px;
+    background-color: #f9f9f9; /* Couleur de fond légère pour distinguer le formulaire */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .registerForm input[type="text"],
+  .registerForm input[type="email"] {
+    width: 80%;
+    max-width: 300px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .registerForm button[type="submit"] {
+    background-color: #007bff; /* Couleur de fond différente pour distinguer l'action de soumission */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .registerForm button[type="submit"]:hover {
+    background-color: #218838; /* Couleur au survol */
+  }
+  

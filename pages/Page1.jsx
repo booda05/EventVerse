@@ -12,6 +12,6 @@ const speedDatingEvents = [
     },
 ];
 
-const SpeedDatingPage = () => <EventsList events={speedDatingEvents} />;
-
-export default page1()(SpeedDatingPage);
+export default function Page1() {
+    return <EventsList events={speedDatingEvents} />;
+}

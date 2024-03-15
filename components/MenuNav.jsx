@@ -11,18 +11,18 @@ export default function MenuNav() {
     return <nav className={styles.nav}>
         <ul>
             <li>
-                <Link href="/index" className={pathname === '/index' ? styles.active : ''}>
+                <Link href="/" className={pathname === '/' ? styles.active : ''}>
                     Accueil
                 </Link>
             </li>
             <li>
-                <Link href="/page1" className={pathname === '/page1' ? styles.active : ''}>
-                    Page 1
+                <Link href="/Page1" className={pathname === '/Page1' ? styles.active : ''}>
+                   Speed Dating
                 </Link>
             </li>
             <li>
-                <Link href="/page2" className={pathname === '/page2' ? styles.active : ''}>
-                    Page 2
+                <Link href="/Page2" className={pathname === '/Page2' ? styles.active : ''}>
+                    Stand Up
                 </Link>
             </li>
         </ul>

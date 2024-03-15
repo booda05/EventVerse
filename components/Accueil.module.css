@@ -135,3 +135,12 @@
   text-align: center;
   margin-top: 1rem;
 }
+.event a, .event a:visited {
+  color: inherit; /* Utilise la couleur du texte environnant */
+  text-decoration: none; /* Supprime le soulignement */
+}
+
+.event a:hover {
+  
+  color: #969797; /* Change la couleur au survol, si vous le souhaitez */
+}

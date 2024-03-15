@@ -1,9 +1,12 @@
-.body {
+/* layout.module.css ou votre fichier CSS correspondant */
+.layoutContainer {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-.main {
+  }
+  
+  .mainContent {
     flex: 1;
-}
+   
+  }
+  
