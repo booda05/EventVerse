@@ -1,9 +1,9 @@
 // components/FormContact.jsx
 import React from 'react';
-import './FormContact.module.css';
+import styles from './FormContact.module.css';
 
-const FormContact = ({ onFormSubmit, onNameChange, onEmailChange, onMessageChange, formData }) => (
-  <form onSubmit={onFormSubmit}>
+const FormContact = ({handleSubmit, onNameChange, onEmailChange, onMessageChange, formData }) => (
+    <form className={styles.formContainer} onSubmit={handleSubmit}>
     <label>
       Nom:
       <input type="text" name="name" value={formData.name} onChange={onNameChange} required />

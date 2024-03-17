@@ -1,4 +1,6 @@
 // app/Contact/page.jsx
+'use client'
+
 import React, { useState } from 'react';
 import Layout from '../layout';
 import FormContact from '../../components/FormContact';
@@ -29,7 +31,7 @@ const ContactPage = () => {
       <div className="contactPageContainer">
         <h1>Contactez-nous</h1>
         <FormContact
-          onFormSubmit={handleSubmit}
+          handleSubmit={handleSubmit}
           onNameChange={handleChange}
           onEmailChange={handleChange}
           onMessageChange={handleChange}
