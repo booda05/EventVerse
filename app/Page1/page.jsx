@@ -1,5 +1,5 @@
 import React from 'react';
-import EventsList from "../components/Event";
+import EventsList from "../../components/Event";
 
 // Exemple de données pour les événements
 const speedDatingEvents = [

@@ -1,15 +1,21 @@
 'use client';
 
 import React, { useState } from 'react';
-import styles from '/components/Accueil.module.css'; // Assurez-vous que le chemin d'accès est correct
+import styles from '../../components/Accueil.module.css'; 
 import Link from 'next/link';
 import Image from 'next/image';
+import Head from 'next/head';
+
 
 export default function Accueil() {
   const [titre, setTitre] = useState('Bienvenue sur Notre Site Événementiel');
 
   return (
     <div className={styles.container}>
+       <Head>
+        <title>{titre}</title>
+        <meta name="description" content="Bienvenue sur Notre Site Événementiel, découvrez les prochains événements à ne pas manquer et participez à des soirées inoubliables. Consultez les témoignages et contactez-nous pour plus d'informations." />
+      </Head>
       {/* Section Hero/Bannière */}
       <section className={styles.heroSection}>
       <h1 className={styles.heroTitle} onClick={() => setTitre('Découvrez Nos Événements !')}>{titre}</h1>
@@ -23,7 +29,7 @@ export default function Accueil() {
     <div className={styles.event}>
       <Link href="/Page1">
        
-      <Image src="/date.jpg" alt="Événement 1" width={500} height={300} className={styles.eventImage}/>
+      <Image src="/date.jpg" alt="Événement 1" width={750} height={562} className={styles.eventImage}/>
           <div><h2>Soirée Speed Dating</h2></div>
         
       </Link>
@@ -33,7 +39,7 @@ export default function Accueil() {
     <div className={styles.event}>
       <Link href="/Page2">
        
-        <Image src="/standup.jpg" alt="Événement 1" width={500} height={300} className={styles.eventImage}/>
+        <Image src="/standup.jpg" alt="Événement 1" width={900} height={900} className={styles.eventImage}/>
           <div><h2>Soirée StandUP</h2></div>
             
       </Link>
