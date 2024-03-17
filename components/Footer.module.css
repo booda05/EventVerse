@@ -1,4 +1,7 @@
 .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem;
     background-color: #333; /* Assorti à la couleur de fond de l'en-tête pour un thème cohérent */
     color: #fff; /* Couleur de texte en blanc pour un contraste élevé et une lisibilité améliorée */
@@ -6,3 +9,11 @@
     font-family: 'Merriweather', serif; /* Utilise la même police élégante que le titre pour l'uniformité */
     border-top: 1px solid #444; /* Ajoute une bordure subtile en haut pour délimiter le pied de page de la partie principale */
 }
+.contactLink {
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    color: inherit; /* Hérite la couleur du texte du parent */
+  }
+  
+  .contactLink:hover {
+    text-decoration: underline; /* Ajoute un soulignement au survol */
+  }

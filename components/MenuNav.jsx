@@ -25,6 +25,11 @@ export default function MenuNav() {
                     Stand Up
                 </Link>
             </li>
+            <li>
+                <Link href="/Contact" className={pathname === '/Contact' ? styles.active : ''}>
+                    contact
+                </Link>
+            </li>
         </ul>
     </nav>
 }
