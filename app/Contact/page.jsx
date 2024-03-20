@@ -1,6 +1,5 @@
 // app/Contact/page.jsx
 'use client'
-
 import React, { useState } from 'react';
 import Layout from '../layout';
 import FormContact from '../../components/FormContact';
@@ -23,6 +22,7 @@ const ContactPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form Data:', formData);
+    // Ici, implémentez la logique de traitement du formulaire, comme l'envoi d'un email.
     alert('Votre message a été envoyé !');
   };
 
@@ -32,9 +32,7 @@ const ContactPage = () => {
         <h1>Contactez-nous</h1>
         <FormContact
           handleSubmit={handleSubmit}
-          onNameChange={handleChange}
-          onEmailChange={handleChange}
-          onMessageChange={handleChange}
+          handleChange={handleChange}
           formData={formData}
         />
       </div>
