@@ -1,129 +1,107 @@
-    'use client'
+// Importe les hooks et styles nécessaires
+import { useState } from 'react';
+import styles from './Form.module.css';
 
-    import { useState } from 'react'
+// Définition du composant de formulaire
+export default function FormControl() {
+    // État pour stocker les valeurs du formulaire
+    const [formData, setFormData] = useState({
+        nomUtilisateur: '',
+        motDePasse: '',
+        rappelerMoi: false,
+        email: '',
+        confirmEmail: '',
+    });
 
-    import styles from './Form.module.css'
+    // État pour stocker les messages d'erreur des champs du formulaire
+    const [errors, setErrors] = useState({
+        erreurNomUtilisateur: '',
+        erreurMotDePasse: '',
+        erreurEmail: '',
+    });
 
-    export default function FormControl() {
-        const [nomUtilisateur, setNomUtilisateur] = useState('');
-        const handleNomUtilisateur = (event) => setNomUtilisateur(event.target.value);
-        const [motDePasse, setMotDePasse] = useState('');
-        const handleMotDePasse = (event) => setMotDePasse(event.target.value);
-        const [rappelerMoi, setRappelerMoi] = useState(false);
-        const handleRappelerMoi = (event) => setRappelerMoi(event.target.checked);
-        const [email, setEmail] = useState('');
-        const [confirmEmail, setConfirmEmail] = useState('');
-        const [erreurEmail, setErreurEmail] = useState('');
+    // État pour suivre si le formulaire a été soumis avec succès
+    const [estSoumis, setEstSoumis] = useState(false);
 
-        const [erreurNomUtilisateur, setErreurNomUtilisateur] = useState('');
-        const [erreurMotDePasse, setErreurMotDePasse] = useState('');
+    // Gère les changements dans les champs du formulaire et met à jour l'état correspondant
+    const handleInputChange = (event) => {
+        const { name, value, checked, type } = event.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: type === 'checkbox' ? checked : value,
+        }));
+    };
 
-        const [estSoumis, setEstSoumis] = useState(false);
+    // Valide les données du formulaire et met à jour l'état des erreurs si nécessaire
+    const validateForm = () => {
+        let newErrors = { ...errors };
+        let isValid = true;
 
-        const handleSubmit = (event) => {
-            event.preventDefault();
-
-            let estValide = true;
-            if(!nomUtilisateur || nomUtilisateur.length < 8) {
-                estValide = false;
-                setErreurNomUtilisateur('Nom utilisateur invalide');
-            }
-            else {
-                setErreurNomUtilisateur('');
-            }
-
-            if(!motDePasse || motDePasse.length < 8) {
-                estValide = false;
-                setErreurMotDePasse('Mot de passe invalide');
-            }
-            else {
-                setErreurMotDePasse('');
-            }
-            if (!email || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(email)) {
-                estValide = false;
-                setErreurEmail('Adresse email invalide');
-            } else if (email !== confirmEmail) {
-                estValide = false;
-                setErreurEmail('Les adresses email ne correspondent pas');
-            } else {
-                setErreurEmail('');
-            }
-        
-
-            if(estValide) {
-                setEstSoumis(true);
-            }
+        // Validation du nom d'utilisateur
+        if (!formData.nomUtilisateur || formData.nomUtilisateur.length < 8) {
+            isValid = false;
+            newErrors.erreurNomUtilisateur = 'Nom utilisateur invalide';
+        } else {
+            newErrors.erreurNomUtilisateur = '';
         }
 
-        return <form className={styles.formContainer} onSubmit={handleSubmit}>
-            <label className={styles.label}>
-            Nom d&apos;utilisateur 
-                <input 
-                    type="text" 
-                    name="nomUtilisateur" 
-                    className={styles.inputField}
-                    value={nomUtilisateur}
-                    onChange={handleNomUtilisateur} />
-                    {erreurNomUtilisateur && 
-                    <div className={styles.erreur}>
-            {erreurNomUtilisateur}
-        </div>
-    }
-    </label>
-                <label className={styles.label}>
-                Adresse email:
-                <input
-                    type="email"
-                    name="email"
-                    className={styles.inputField}
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                />
-            </label>
-            {erreurEmail && <div className={styles.erreur}>{erreurEmail}</div>}
+        // Validation du mot de passe
+        if (!formData.motDePasse || formData.motDePasse.length < 8) {
+            isValid = false;
+            newErrors.erreurMotDePasse = 'Mot de passe invalide';
+        } else {
+            newErrors.erreurMotDePasse = '';
+        }
 
-            <label className={styles.label}>
-                Confirmer votre adresse email:
-                <input
-                    type="email"
-                    name="confirmEmail"
-                    className={styles.inputField}
-                    value={confirmEmail}
-                    onChange={(e) => setConfirmEmail(e.target.value)}
-                />
-            </label>
+        // Validation de l'email
+        if (!formData.email || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(formData.email)) {
+            isValid = false;
+            newErrors.erreurEmail = 'Adresse email invalide';
+        } else if (formData.email !== formData.confirmEmail) {
+            isValid = false;
+            newErrors.erreurEmail = 'Les adresses email ne correspondent pas';
+        } else {
+            newErrors.erreurEmail = '';
+        }
 
-            <label>
-                Mot de passe:
-                <input 
+        setErrors(newErrors);
+        return isValid;
+    };
+
+    // Gère la soumission du formulaire
+    const handleSubmit = (event) => {
+        event.preventDefault(); // Empêche le comportement par défaut de rechargement de la page
+
+        if (validateForm()) { // Si le formulaire est valide
+            setEstSoumis(true); // Indique que le formulaire a été soumis avec succès
+            // Ici, on peut ajouter la logique pour traiter les données du formulaire (e.g., envoi à un serveur)
+        }
+    };
+
+    // Rendu du composant de formulaire
+    return (
+        <form className={styles.formContainer} onSubmit={handleSubmit}>
+            {/* Champ Nom d'utilisateur */}
+            <label className={styles.label}>
+                Nom d&apos;utilisateur
+                <input
+                    type="text"
+                    name="nomUtilisateur"
                     className={styles.inputField}
-                    type="password" 
-                    name="motDePasse"
-                    value={motDePasse}
-                    onChange={handleMotDePasse} />
-                {erreurMotDePasse && 
+                    value={formData.nomUtilisateur}
+                    onChange={handleInputChange} />
+                {errors.erreurNomUtilisateur &&
                     <div className={styles.erreur}>
-                        {erreurMotDePasse}
+                        {errors.erreurNomUtilisateur}
                     </div>
                 }
             </label>
-            <label>
-                
-                Se rappeler de moi
-                <input 
-                    className={styles.checkboxLabel}
-                    type="checkbox" 
-                    name="rappelerMoi"
-                    checked={rappelerMoi}
-                    onChange={handleRappelerMoi} />
-            </label>
-
             <input className={styles.submitButton} type="submit" value="S'inscrire" />
-
-            {estSoumis && 
+            {estSoumis &&
                 <div>
-                    Le formulaire a été envoyer avec succès.
+                    Le formulaire a été envoyé avec succès.
                 </div>
             }
         </form>
-    }
+    );
+}

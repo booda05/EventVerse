@@ -27,7 +27,7 @@ const ContactPage = () => {
   };
 
   return (
-    <Layout>
+   
       <div className="contactPageContainer">
         <h1>Contactez-nous</h1>
         <FormContact
@@ -36,7 +36,7 @@ const ContactPage = () => {
           formData={formData}
         />
       </div>
-    </Layout>
+   
   );
 };
 
