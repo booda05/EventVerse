@@ -8,7 +8,7 @@ import Head from 'next/head';
 
 
 export default function Accueil() {
-  const [titre, setTitre] = useState('Bienvenue sur Notre Site Événementiel');
+  const titre = 'Bienvenue sur Notre Site Événementiel';
 
   return (
     <div className={styles.container}>

@@ -22,7 +22,7 @@ const ContactPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form Data:', formData);
-    // Ici, implémentez la logique de traitement du formulaire, comme l'envoi d'un email.
+    // implémentez la logique de traitement du formulaire, comme l'envoi d'un email.
     alert('Votre message a été envoyé !');
   };
 

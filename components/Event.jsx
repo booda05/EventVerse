@@ -1,4 +1,4 @@
-
+'use client'
 import React, { useState } from 'react';
 import styles from './Event.module.css';
 import Form from './Form';
@@ -23,15 +23,20 @@ const EventsList = ({ events }) => {
           <p className={styles.eventDescription}>{event.description}</p>
           <Image src={event.imageUrl} alt={event.title} width={500} height={300} className={styles.eventImage} />
           <div className={styles.registerButtonContainer}>
-          {selectedEvent !== event.id && (
+         
             <button
               type="button"
               className={styles.registerButton}
-              onClick={() => setSelectedEvent(event.id)}
+              onClick={() => {
+                console.log(`Tentative d'inscription à l'événement ${event.id}`);
+                setSelectedEvent(event.id);
+                console.log(selectedEvent);
+            }}
+            
             >
                S&apos;inscrire
             </button>
-            )}
+            
           </div>
           {selectedEvent === event.id && (
             <Form eventId={event.id} />
