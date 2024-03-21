@@ -1,17 +1,14 @@
 /* Style du conteneur de navigation */
 .nav ul {
     display: flex;
-    gap: 2rem;
     list-style-type: none;
     margin: 0;
     padding: 0;
     align-items: center;
-    justify-content: space-between; /* Assure la répartition de l'espace */
+    justify-content: flex-start; /* Assure la répartition de l'espace */
 }
 
-.nav li {
-    margin-right: 1rem;
-}
+
 
 .nav a, .contactButton { /* Applique le style à la fois aux liens et au bouton de contact */
     color: #fff;
@@ -36,6 +33,3 @@
 }
 
 /* Utiliser cette classe sur l'élément contenant le bouton Contact si besoin de le pousser à droite */
-.navRight {
-    margin-left: auto;
-}

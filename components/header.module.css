@@ -14,12 +14,7 @@
     text-align: center;
 }
 
-/* Assure que l'image du logo est bien intégrée dans le thème sombre, avec une taille appropriée */
-.header img {
-    width: 60px; /* Taille ajustée pour l'équilibre */
-    height: auto; /* Garde le ratio de l'image */
-    filter: brightness(0) invert(1); /* Inverse les couleurs du logo pour qu'il ressorte sur fond sombre */
-}
+
 
 /* Ajuste le style du titre pour un alignement et un espacement parfaits */
 .title {

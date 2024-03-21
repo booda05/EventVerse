@@ -1,5 +1,6 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+
 import styles from './Event.module.css';
 import Form from './Form';
 import Image from 'next/image';
@@ -11,8 +12,14 @@ const EventsList = ({ events }) => {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const pageTitle = selectedEvent ? `Inscription à l'événement ${events.find(e => e.id === selectedEvent)?.title}` : "Liste des événements";
 
+  // Ajoutez useEffect ici pour observer les changements de selectedEvent
+  useEffect(() => {
+    console.log(selectedEvent);
+  }, [selectedEvent]);
+
    // Fonction pour gérer le clic sur le bouton d'inscription
    const handleRegisterClick = (eventId) => {
+    console.log(`Bouton cliqué pour l'événement ID: ${eventId}`);
     setSelectedEvent(eventId);
   };
 

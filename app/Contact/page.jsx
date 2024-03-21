@@ -1,8 +1,8 @@
 // app/Contact/page.jsx
 'use client'
 import React, { useState } from 'react';
-import Layout from '../layout';
 import FormContact from '../../components/FormContact';
+
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -29,7 +29,7 @@ const ContactPage = () => {
   return (
    
       <div className="contactPageContainer">
-        <h1>Contactez-nous</h1>
+       
         <FormContact
           handleSubmit={handleSubmit}
           handleChange={handleChange}

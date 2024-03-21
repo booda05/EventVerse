@@ -11,11 +11,7 @@ export default function MenuNav() {
     return (
         <nav className={styles.nav}>
             <ul>
-                <li>
-                    <Link href="/" className={pathname === '/' ? styles.active : ''}>
-                        Accueil
-                    </Link>
-                </li>
+            
                 <li>
                     <Link href="/Page1" className={pathname === '/Page1' ? styles.active : ''}>
                        Speed Dating

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import styles from './Form.module.css';
 
 // Définition du composant de formulaire
-export default function FormControl() {
+export default function Forml() {
     // État pour stocker les valeurs du formulaire
     const [formData, setFormData] = useState({
         nomUtilisateur: '',
