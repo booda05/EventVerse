@@ -1,0 +1,25 @@
+/* EventLayout.module.css */
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 600px;
+}
+
+.title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.dateLocation {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.childrenContent {
+    font-size: 14px;
+    color: #444;
+}

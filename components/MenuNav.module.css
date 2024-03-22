@@ -8,7 +8,9 @@
     justify-content: flex-start; /* Assure la répartition de l'espace */
 }
 
-
+.nav li:last-child {
+    margin-left: auto; /* Pousser le dernier élément (Contactez-nous) à droite */
+}
 
 .nav a, .contactButton { /* Applique le style à la fois aux liens et au bouton de contact */
     color: #fff;
@@ -25,11 +27,15 @@
 }
 
 /* Style spécifique pour le bouton Contact */
+/* Style spécifique pour le bouton Contact */
 .contactButton {
-    background-color: #333; /* Plus foncé pour s'aligner sur le thème */
-    color: #fff; /* Texte en blanc */
-    border: none;
-    cursor: pointer; /* Change le curseur pour indiquer la possibilité d'un clic */
+    background-color: #fff; /* Fond blanc */
+    color: #000; /* Texte en noir */
+    border: 1px solid #000; /* Bordure noire */
+    cursor: pointer;
 }
 
-/* Utiliser cette classe sur l'élément contenant le bouton Contact si besoin de le pousser à droite */
+.contactButton:hover {
+    background-color: #000; /* Fond noir */
+    color: #fff; /* Texte en blanc */
+}

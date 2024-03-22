@@ -1,0 +1,50 @@
+/* Form.module.css */
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .erreur {
+    color: red; /* Pour les messages d'erreur */
+    margin-top: 10px;
+  }
+  
+  .input, /* Classe unifiée pour tous les types d'input */
+  .submitButton { /* Classe pour le bouton submit */
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Assure que padding ne dépasse pas la largeur définie */
+  }
+  
+  .submitButton {
+    width: auto;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+  }
+  
+  .submitButton:hover {
+    background-color: #0056b3;
+  }
+  .pageTitle {
+    text-align: center;
+    margin-top: 20px; /* Ajustez la marge au besoin */
+}
